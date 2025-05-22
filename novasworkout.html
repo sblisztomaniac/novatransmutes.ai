@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nova Exercise - Transform your workout routine with AI-powered guidance" />
+  <title>Nova Exercise - The Narrative Engine</title>
+  <link rel="stylesheet" href="./src/styles/main.css" />
+  <link rel="stylesheet" href="./src/styles/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="background-overlay" role="presentation"></div>
+  
+  <header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#welcome">The Beginning</a></li>
+        <li><a href="index.html#essence">The Break</a></li>
+        <li><a href="index.html#origin">The Spark</a></li>
+        <li><a href="index.html#expressions">The Fire</a></li>
+        <li><a href="index.html#transmissions">The Path</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" style="padding: 0; max-width: none;">
+    <iframe
+      src="https://novasworkout.streamlit.app/"
+      style="width: 100%; height: calc(100vh - 64px); border: none;"
+      title="Nova Exercise"
+      allow="accelerometer; camera; gyroscope; microphone"
+    ></iframe>
+  </main>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

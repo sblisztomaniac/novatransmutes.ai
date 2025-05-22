@@ -1,0 +1,44 @@
+/* Existing styles... */
+
+.icon {
+  color: var(--accent-light);
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+  stroke: currentColor;
+  /* Improve iOS rendering */
+  transform-origin: center;
+  -webkit-transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.collapsible.active .icon svg {
+  transform: rotate(90deg);
+}
+
+/* Add iOS-specific optimizations */
+@supports (-webkit-touch-callout: none) {
+  .icon {
+    /* Prevent text selection on iOS */
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .collapsible-header {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
