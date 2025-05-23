@@ -284,6 +284,36 @@ p {
   outline: none;
 }
 
+.card-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0e1e1c;
+  color: #f6c98d;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(246, 201, 141, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-button:hover {
+  background-color: #1a2f2c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #f6c98d;
+}
+
+.card-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #0e1e1c;
+}
 footer {
   text-align: center;
   padding: var(--spacing-lg) var(--spacing-sm);
