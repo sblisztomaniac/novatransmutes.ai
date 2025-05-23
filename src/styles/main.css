@@ -100,7 +100,7 @@ main {
 
 section {
   margin-bottom: var(--spacing-xl);
-  opacity: 0;
+  opacity: 1;
   transform: translateY(20px);
   scroll-margin-top: 5rem;
 }
