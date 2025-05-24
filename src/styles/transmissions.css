@@ -202,8 +202,38 @@ main {
 }
 
 /* iOS-specific optimizations */
+/* Force arrow colors on iOS Chrome/Safari */
+.icon {
+  color: #d6ae7b !important;
+  -webkit-text-fill-color: #d6ae7b !important;
+  -webkit-text-stroke: 0.5px #d6ae7b !important;
+}
+
+.collapsible-header .icon {
+  color: #d6ae7b !important;
+  -webkit-text-fill-color: #d6ae7b !important;
+}
+
+.collapsible.active .icon,
+.collapsible.open .icon {
+  color: #d6ae7b !important;
+  -webkit-text-fill-color: #d6ae7b !important;
+}
+
+/* iOS-specific override */
 @supports (-webkit-touch-callout: none) {
-  .collapsible-header {
-    -webkit-tap-highlight-color: transparent;
+  .icon {
+    color: #d6ae7b !important;
+    -webkit-text-fill-color: #d6ae7b !important;
+    -webkit-text-stroke-color: #d6ae7b !important;
+  }
+}
+
+/* Nuclear option for mobile */
+@media (max-width: 768px) {
+  .collapsible-header .icon {
+    color: #d6ae7b !important;
+    -webkit-text-fill-color: #d6ae7b !important;
+    text-shadow: 0 0 0 #d6ae7b !important;
   }
 }
